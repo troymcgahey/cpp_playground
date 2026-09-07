@@ -1,18 +1,30 @@
 #include <iostream>
 #include <string>
 
-int main() {
-
-    std::string firstName;
-    std::string favoriteThing;
+std::string askForName() {
+    std::string name;
 
     std::cout << "What is your name? ";
-    std::getline(std::cin, firstName);
+    std::getline(std::cin, name);
+
+    return name;
+}
+
+std::string askForActivity() {
+    std::string activity;
 
     std::cout << "What is something you enjoy? ";
-    std::getline(std::cin, favoriteThing);
+    std::getline(std::cin, activity);
 
-    std::string message = "Hello, " + firstName + "! You said you enjoy " + favoriteThing + ".";
+    return activity;
+}
+
+int main() {
+
+    std::string name = askForName();
+    std::string activity = askForActivity();
+
+    std::string message = "Hello, " + name + "! You said you enjoy " + activity + ".";
 
     std::cout << "\n" << message << "\n";
 
