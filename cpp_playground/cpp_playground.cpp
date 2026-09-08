@@ -28,5 +28,12 @@ int main() {
 
     std::cout << "\n" << message << "\n";
 
+    std::string word = "Hello";
+
+    for (std::size_t index = 0; index < word.size(); index++) {
+        std::cout << "word[" << index << "] = "
+                  << word[index] << "\n";
+    }
+
     return 0;
 }
