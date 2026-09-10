@@ -3,8 +3,20 @@
 
 struct Node {
     int node_value;
-    Node* prev_node = nullptr;
-    Node* next_node = nullptr;
+    Node* prev_node;
+    Node* next_node;
+
+    Node(int value) {
+        node_value = value;
+        prev_node = nullptr;
+        next_node = nullptr;
+    }
+
+    void get_next_node() {
+    }
+
+    void get_prev_node() {
+    }
 };
 
 int main() {
