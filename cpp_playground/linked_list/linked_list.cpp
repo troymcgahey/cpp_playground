@@ -37,7 +37,6 @@ struct linkedList {
         }
         last_node = new_node;
         size = size + 1;
-        std::cout << "Size " << size << ".\n";
     }
 };
 
@@ -52,8 +51,9 @@ int main() {
         linkedList.insert(num);
     }
 
-    std::cout << "First node value is " << linkedList.first_node->node_value << ".\n";
-    std::cout << "Last node value is " << linkedList.last_node->node_value << ".\n";
+    std::cout << "First node value is " << linkedList.first_node->node_value << "\n";
+    std::cout << "Last node value is " << linkedList.last_node->node_value << "\n";
+    std::cout << "Linked list size is " << linkedList.size << "\n";
 
     return 0;
 }
