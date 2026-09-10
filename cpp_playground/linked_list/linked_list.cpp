@@ -19,12 +19,41 @@ struct Node {
     }
 };
 
+struct linkedList {
+    Node* first_node;
+    Node* last_node;
+    int size;
+
+    linkedList() {
+        first_node = nullptr;
+        last_node = nullptr;
+        size = 0;
+    }
+
+    void insert(int value) {
+        Node* new_node = new Node(value);
+        if(size == 0) {
+            first_node = new_node;
+        }
+        last_node = new_node;
+        size = size + 1;
+        std::cout << "Size " << size << ".\n";
+    }
+};
+
 int main() {
     std::cout << "Hello! This is a linked list" << "\n\n";
 
-    Node* new_node = new Node{51};
+    std::vector<int> numbers = {10, 20, 30, 40, 50};
 
-    std::cout << "New node value " << new_node->node_value << ".\n";
+    linkedList linkedList;
+
+    for(int num : numbers) {
+        linkedList.insert(num);
+    }
+
+    std::cout << "First node value is " << linkedList.first_node->node_value << ".\n";
+    std::cout << "Last node value is " << linkedList.last_node->node_value << ".\n";
 
     return 0;
 }
